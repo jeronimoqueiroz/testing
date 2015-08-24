@@ -1,0 +1,79 @@
+clientes:
+
+    - !!models.Cliente
+        id:     1
+        nome:   Juca Silva
+        telefone:  51980099999
+        email:  donald.duck@test.com
+
+    - !!models.Cliente
+        id:     2
+        nome:   Mickey Mouse
+        telefone:  51980099111
+        email:  mickey.mouse@test.com
+
+    - !!models.Cliente
+        id:     3
+        nome:   Carl Barks
+        telefone:  51222099999
+        email:  carl.barks@test.com
+
+    - !!models.Cliente
+        id:     4
+        nome:   Don Rosa
+        telefone:  51280099999
+        email:  don.rosa@test.com
+
+    - !!models.Cliente
+        id:     5
+        nome:   Goofy
+        telefone:  54980099999
+        email:  goofy@test.com
+
+    - !!models.Cliente
+        id:     6
+        nome:   Pedro Silva
+        telefone:  51980099959
+        email:  pluto@test.com
+
+    - !!models.Cliente
+        id:     7
+        nome:   Fabio Silva
+        telefone:  51880099999
+        email:  a.goof@test.com
+
+    - !!models.Cliente
+        id:     8
+        nome:   Juan Luiz
+        telefone:  11980099999
+        email:  grandma@test.com
+
+    - !!models.Cliente
+        id:     9
+        nome:   Silva Jardim
+        telefone:  11770099999
+        email:  gladstone.gander@test.com
+
+    - !!models.Cliente
+        id:     10
+        nome:   Fethry Duck
+        telefone:  51900099999
+        email:  fethry.duck@test.com
+
+    - !!models.Cliente
+        id:     11
+        nome:   Daisy Duck
+        telefone:  51333333333
+        email:  daisy.duck@test.com
+
+    - !!models.Cliente
+        id:     12
+        nome:   Scrooge McDuck
+        telefone:  517780099999
+        email:  scrooge.mcduck@test.com
+
+    - !!models.Cliente
+        id:     13
+        nome:   Ludwig von Drake
+        telefone:  51180099999
+        email:  ludwig.drake@test.com

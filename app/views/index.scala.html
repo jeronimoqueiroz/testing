@@ -1,0 +1,37 @@
+@(message: String)
+ 
+@main("Dados dos clientes") {
+ 
+<script type="text/javascript">
+  /* Table initialisation */
+  $(document).ready(function() {
+    $('#cliente_table').dataTable( {
+      "bProcessing": true,
+      "aaSorting": [[ 0, "asc" ]],
+      "bServerSide": true,
+      "bJQueryUI": true,
+      "sPaginationType": "full_numbers",
+      "sAjaxSource": "@routes.Application.list()"
+    });
+  });
+</script>
+ 
+<h2>Dados dos clientes</h2>
+ 
+<table id="cliente_table" class='display'>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Telefone</th>
+      <th>E-mail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Sem dados</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+}
