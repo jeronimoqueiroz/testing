@@ -21,9 +21,10 @@ public class Application extends Controller {
         return ok(index.render("Your new application is ready."));
     }
 
+    
     public static Result list() {
         /**
-         * Get needed params
+         * Obtem parametros de pesquisa caso possua
          */
         Map<String, String[]> params = request().queryString();
      
@@ -33,7 +34,7 @@ public class Application extends Controller {
         Integer page = Integer.valueOf(params.get("iDisplayStart")[0]) / pageSize;
      
         /**
-         * Get sorting order and column
+         * Inicia o sort por nome, e configura o tratamento do sort para as demais colunas
          */
         String sortBy = "nome";
         String order = params.get("sSortDir_0")[0];
@@ -45,8 +46,7 @@ public class Application extends Controller {
         }
      
         /**
-         * Get page to show from database
-         * It is important to set setFetchAhead to false, since it doesn't benefit a stateless application at all.
+         * monta a paginacao pelo banco. e filtro caso possua
          */
         Page<Cliente> contactsPage = Cliente.find.where(
           Expr.or(
@@ -64,7 +64,7 @@ public class Application extends Controller {
         Integer iTotalDisplayRecords = contactsPage.getTotalRowCount();
      
         /**
-         * Construct the JSON to return
+         * monta o json
          */
         ObjectNode result = Json.newObject();
      
@@ -80,8 +80,7 @@ public class Application extends Controller {
           row.put("1", c.telefone);
           row.put("2", c.email);
           an.add(row);
-        }
-     
+        } 
         return ok(result);
      }
     }
